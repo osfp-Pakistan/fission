@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#test:disabled
 #
 # Simple test of recorder updates
 # 0) Setup: One recorder created for function with trigger

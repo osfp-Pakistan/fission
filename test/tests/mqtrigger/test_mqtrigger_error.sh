@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#test:disabled
 #
 # Create a function and trigger it using NATS
 # To run this on Minikube, uncomment line 18

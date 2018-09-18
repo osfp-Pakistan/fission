@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#test:disabled
 #
 # Simple end-to-end test of record with POST
 # Two recorders tested: by function, by trigger (TODO)

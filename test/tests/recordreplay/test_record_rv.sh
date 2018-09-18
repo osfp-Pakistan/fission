@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#test:disabled
 #
 # Simple end-to-end test of record with GET
 # 0) Setup: Two triggers created for a function (different urls, urlA and urlB)

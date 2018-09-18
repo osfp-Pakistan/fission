@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#test:disabled
 set -euo pipefail
 
 # test_annotations.sh - tests whether a user is able to add pod annotations to a Fission environment deployment
