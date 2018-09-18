@@ -171,7 +171,7 @@ set_environment() {
 }
 
 generate_test_id() {
-    echo $(date|md5sum|cut -c1-6)
+    echo $(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w 6 | head -n 1)
 }
 
 helm_install_fission() {
