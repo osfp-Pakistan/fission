@@ -34,8 +34,12 @@ success_scenario() {
     log "Create a canary config to gradually increment the weight of version-2 by a step of 30 every 30s"
     fission canary-config create --name canary-1 --funcN fn-v2 --funcN-1 fn-v1 --httptrigger route-success --increment-step 50 --increment-interval 1m --failure-threshold 10
 
+    sleep 60
+
     log "Fire requests to the route"
-    ab -n 10000 -c 1 http://$FISSION_ROUTER/success
+    ab -n 2000 -c 1 http://$FISSION_ROUTER/success
+
+    sleep 60
 
     log "verify that version-2 of the function is receiving 100% traffic"
     weight=`kubectl get httptrigger route-success -o jsonpath='{.spec.functionref.functionweights.fn-v2}'`
