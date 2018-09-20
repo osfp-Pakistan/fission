@@ -171,7 +171,7 @@ set_environment() {
 }
 
 generate_test_id() {
-    echo $(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 6 | head -n 1)
+    echo $(cat /dev/urandom | tr -dc 'a-z' | fold -w 6 | head -n 1)
 }
 
 helm_install_fission() {
